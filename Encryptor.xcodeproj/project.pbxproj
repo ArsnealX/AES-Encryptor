@@ -7,14 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EBB5C6831D8E87A50052414B /* NSData+Encryption.m in Sources */ = {isa = PBXBuildFile; fileRef = EBB5C6821D8E87A50052414B /* NSData+Encryption.m */; };
+		EBB5C68A1D8E8FD20052414B /* EncrypteOutputHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = EBB5C6891D8E8FD20052414B /* EncrypteOutputHelper.m */; };
 		EBC4C2C71D8E62EC006C35F4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EBC4C2C61D8E62EC006C35F4 /* AppDelegate.m */; };
 		EBC4C2CA1D8E62EC006C35F4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EBC4C2C91D8E62EC006C35F4 /* main.m */; };
 		EBC4C2CD1D8E62EC006C35F4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBC4C2CC1D8E62EC006C35F4 /* ViewController.m */; };
 		EBC4C2CF1D8E62EC006C35F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBC4C2CE1D8E62EC006C35F4 /* Assets.xcassets */; };
 		EBC4C2D21D8E62EC006C35F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBC4C2D01D8E62EC006C35F4 /* Main.storyboard */; };
+		EBC4C2DB1D8E7424006C35F4 /* MainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBC4C2DA1D8E7424006C35F4 /* MainWindowController.m */; };
+		EBC4C2DE1D8E77A6006C35F4 /* KeyContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = EBC4C2DD1D8E77A6006C35F4 /* KeyContainerView.m */; };
+		EBC4C2E11D8E77B6006C35F4 /* DropContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = EBC4C2E01D8E77B6006C35F4 /* DropContainerView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EBB5C6811D8E87A50052414B /* NSData+Encryption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Encryption.h"; sourceTree = "<group>"; };
+		EBB5C6821D8E87A50052414B /* NSData+Encryption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Encryption.m"; sourceTree = "<group>"; };
+		EBB5C6881D8E8FD20052414B /* EncrypteOutputHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EncrypteOutputHelper.h; sourceTree = "<group>"; };
+		EBB5C6891D8E8FD20052414B /* EncrypteOutputHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EncrypteOutputHelper.m; sourceTree = "<group>"; };
 		EBC4C2C21D8E62EC006C35F4 /* Encryptor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Encryptor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBC4C2C51D8E62EC006C35F4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EBC4C2C61D8E62EC006C35F4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -24,6 +33,12 @@
 		EBC4C2CE1D8E62EC006C35F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EBC4C2D11D8E62EC006C35F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EBC4C2D31D8E62EC006C35F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EBC4C2D91D8E7424006C35F4 /* MainWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainWindowController.h; sourceTree = "<group>"; };
+		EBC4C2DA1D8E7424006C35F4 /* MainWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainWindowController.m; sourceTree = "<group>"; };
+		EBC4C2DC1D8E77A6006C35F4 /* KeyContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyContainerView.h; sourceTree = "<group>"; };
+		EBC4C2DD1D8E77A6006C35F4 /* KeyContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyContainerView.m; sourceTree = "<group>"; };
+		EBC4C2DF1D8E77B6006C35F4 /* DropContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropContainerView.h; sourceTree = "<group>"; };
+		EBC4C2E01D8E77B6006C35F4 /* DropContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropContainerView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +52,46 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EBB5C6841D8E885D0052414B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EBC4C2D91D8E7424006C35F4 /* MainWindowController.h */,
+				EBC4C2DA1D8E7424006C35F4 /* MainWindowController.m */,
+				EBC4C2CB1D8E62EC006C35F4 /* ViewController.h */,
+				EBC4C2CC1D8E62EC006C35F4 /* ViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		EBB5C6851D8E886C0052414B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EBC4C2DC1D8E77A6006C35F4 /* KeyContainerView.h */,
+				EBC4C2DD1D8E77A6006C35F4 /* KeyContainerView.m */,
+				EBC4C2DF1D8E77B6006C35F4 /* DropContainerView.h */,
+				EBC4C2E01D8E77B6006C35F4 /* DropContainerView.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		EBB5C6861D8E88780052414B /* Categroies */ = {
+			isa = PBXGroup;
+			children = (
+				EBB5C6811D8E87A50052414B /* NSData+Encryption.h */,
+				EBB5C6821D8E87A50052414B /* NSData+Encryption.m */,
+			);
+			name = Categroies;
+			sourceTree = "<group>";
+		};
+		EBB5C6871D8E8FB20052414B /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				EBB5C6881D8E8FD20052414B /* EncrypteOutputHelper.h */,
+				EBB5C6891D8E8FD20052414B /* EncrypteOutputHelper.m */,
+			);
+			name = Helper;
+			sourceTree = "<group>";
+		};
 		EBC4C2B91D8E62EC006C35F4 = {
 			isa = PBXGroup;
 			children = (
@@ -58,8 +113,10 @@
 			children = (
 				EBC4C2C51D8E62EC006C35F4 /* AppDelegate.h */,
 				EBC4C2C61D8E62EC006C35F4 /* AppDelegate.m */,
-				EBC4C2CB1D8E62EC006C35F4 /* ViewController.h */,
-				EBC4C2CC1D8E62EC006C35F4 /* ViewController.m */,
+				EBB5C6871D8E8FB20052414B /* Helper */,
+				EBB5C6861D8E88780052414B /* Categroies */,
+				EBB5C6841D8E885D0052414B /* Controllers */,
+				EBB5C6851D8E886C0052414B /* Views */,
 				EBC4C2CE1D8E62EC006C35F4 /* Assets.xcassets */,
 				EBC4C2D01D8E62EC006C35F4 /* Main.storyboard */,
 				EBC4C2D31D8E62EC006C35F4 /* Info.plist */,
@@ -149,7 +206,12 @@
 			files = (
 				EBC4C2CD1D8E62EC006C35F4 /* ViewController.m in Sources */,
 				EBC4C2CA1D8E62EC006C35F4 /* main.m in Sources */,
+				EBC4C2DB1D8E7424006C35F4 /* MainWindowController.m in Sources */,
+				EBC4C2E11D8E77B6006C35F4 /* DropContainerView.m in Sources */,
+				EBB5C68A1D8E8FD20052414B /* EncrypteOutputHelper.m in Sources */,
+				EBC4C2DE1D8E77A6006C35F4 /* KeyContainerView.m in Sources */,
 				EBC4C2C71D8E62EC006C35F4 /* AppDelegate.m in Sources */,
+				EBB5C6831D8E87A50052414B /* NSData+Encryption.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,6 +361,7 @@
 				EBC4C2D81D8E62EC006C35F4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
