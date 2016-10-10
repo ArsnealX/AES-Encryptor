@@ -12,6 +12,21 @@
 #define kDefaultEncryptKey @"87A68CD13A84EAF8EC39539F55EE89CE"
 
 @implementation EncrypteOutputHelper
++ (NSInteger)processFiles:(NSArray <NSURL *> *)fileURLs withKey:(NSString *)key mode:(EncryptorActionMode)mode {
+    NSInteger success = 0;
+    switch (mode) {
+        case EncryptorActionModeEncryption:
+            success = [[self class] encrypteFiles:fileURLs withKey:key];
+            break;
+        case EncryptorActionModeDecryption:
+            success = [[self class] decrypteFiles:fileURLs withKey:key];
+            break;
+        default:
+            break;
+    }
+    return success;
+}
+
 + (NSInteger)encrypteFiles:(NSArray <NSURL *> *)fileURLs withKey:(NSString *)key {
     NSInteger successCount = 0;
     NSString *outputFolderPath = [[self class] getOutputFolderPath];
@@ -22,6 +37,21 @@
         if ([encryptData writeToFile:outputFilePath atomically:YES]) {
             successCount ++;
             NSLog(@"file %@ encrypted, output path : %@", fileURL.lastPathComponent, outputFilePath);
+        }
+    }
+    return successCount;
+}
+
++ (NSInteger)decrypteFiles:(NSArray <NSURL *> *)fileURLs withKey:(NSString *)key {
+    NSInteger successCount = 0;
+    NSString *outputFolderPath = [[self class] getOutputFolderPath];
+    for (NSURL *fileURL in fileURLs) {
+        NSData *fileData = [NSData dataWithContentsOfURL:fileURL];
+        NSData *decryptData = [fileData AES256DecryptWithKey:(key.length > 0 ? key : kDefaultEncryptKey)];
+        NSString *outputFilePath = [outputFolderPath stringByAppendingPathComponent:fileURL.lastPathComponent];
+        if ([decryptData writeToFile:outputFilePath atomically:YES]) {
+            successCount ++;
+            NSLog(@"file %@ decrypted, output path : %@", fileURL.lastPathComponent, outputFilePath);
         }
     }
     return successCount;

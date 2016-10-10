@@ -16,7 +16,10 @@
 @property (weak) IBOutlet DropContainerView *dropContainerView;
 @property (weak) IBOutlet NSTextField *keyTextField;
 @property (weak) IBOutlet NSTextField *fileCountTextField;
+@property (weak) IBOutlet NSSegmentedControl *modeSegmentedControl;
+
 @property (nonatomic, assign) NSInteger fileCount;
+@property (nonatomic, assign) EncryptorActionMode mode;
 @end
 
 @implementation ViewController
@@ -26,6 +29,7 @@
     self.view.wantsLayer = YES;
     _fileCount = 0;
     _dropContainerView.delegate = self;
+    _mode = EncryptorActionModeEncryption;
 }
 
 - (void)awakeFromNib {
@@ -44,7 +48,7 @@
 }
 
 - (void)dropContainerView:(DropContainerView *)dropContainerView didAcceptFiles:(NSArray<NSURL *> *)fileURLs {
-    NSInteger successCount = [EncrypteOutputHelper encrypteFiles:fileURLs withKey:[_keyTextField stringValue]];
+    NSInteger successCount = [EncrypteOutputHelper processFiles:fileURLs withKey:[_keyTextField stringValue] mode:_mode];
     _fileCount += successCount;
     [_fileCountTextField setStringValue:[NSString stringWithFormat:@"%ld", (long)_fileCount]];
 }
@@ -53,4 +57,7 @@
     [[NSWorkspace sharedWorkspace] openURL:[EncrypteOutputHelper getOutputFolderURL]];
 }
 
+- (IBAction)changeMode:(NSSegmentedControl *)sender {
+    _mode = sender.selectedSegment;
+}
 @end

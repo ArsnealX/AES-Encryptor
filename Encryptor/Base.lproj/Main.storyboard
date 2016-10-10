@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11201"/>
@@ -134,32 +134,47 @@
                                 <rect key="frame" x="0.0" y="65" width="520" height="415"/>
                                 <subviews>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="6vF-LN-pok">
-                                        <rect key="frame" x="61" y="195" width="398" height="25"/>
-                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Start Encryption By Dropping File(s) Here" id="i5F-am-8bA">
+                                        <rect key="frame" x="131" y="195" width="258" height="25"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Drag and Drop File(s) Here" id="i5F-am-8bA">
                                             <font key="font" metaFont="systemMedium" size="21"/>
-                                            <color key="textColor" red="0.074509803920000006" green="0.49019607840000001" blue="0.72941176470000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="textColor" red="0.23524236679077148" green="0.60310691595077515" blue="0.98921471834182739" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="1Tb-dx-C7H">
-                                        <rect key="frame" x="18" y="12" width="127" height="21"/>
-                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Files Encrypted:" id="d6E-IQ-kW8">
+                                        <rect key="frame" x="18" y="12" width="129" height="21"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Files Processed:" id="d6E-IQ-kW8">
                                             <font key="font" metaFont="system" size="17"/>
-                                            <color key="textColor" red="0.074509803920000006" green="0.49019607840000001" blue="0.72941176470000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="textColor" red="0.24835395812988281" green="0.60717374086380005" blue="0.98912650346755981" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="dQU-JN-Q7d">
-                                        <rect key="frame" x="149" y="12" width="15" height="21"/>
+                                        <rect key="frame" x="151" y="12" width="15" height="21"/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="0" id="ehz-BO-Xbi">
                                             <font key="font" metaFont="system" size="17"/>
-                                            <color key="textColor" red="0.074509803920000006" green="0.49019607840000001" blue="0.72941176470000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="textColor" red="0.36951947212219238" green="0.67628496885299683" blue="0.9836464524269104" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
+                                    <segmentedControl verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="0wP-WT-hza">
+                                        <rect key="frame" x="338" y="10" width="164" height="24"/>
+                                        <segmentedCell key="cell" borderStyle="border" alignment="left" style="rounded" trackingMode="selectOne" id="nWP-0h-20i">
+                                            <font key="font" metaFont="system"/>
+                                            <segments>
+                                                <segment label="Encryption" width="79" selected="YES"/>
+                                                <segment label="Decryption" width="78" tag="1"/>
+                                            </segments>
+                                        </segmentedCell>
+                                        <connections>
+                                            <action selector="changeMode:" target="XfG-lQ-9wD" id="2oJ-hv-iWt"/>
+                                        </connections>
+                                    </segmentedControl>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="6vF-LN-pok" firstAttribute="centerY" secondItem="YBn-ZJ-qgv" secondAttribute="centerY" id="FbA-Un-03e"/>
+                                    <constraint firstItem="0wP-WT-hza" firstAttribute="centerY" secondItem="1Tb-dx-C7H" secondAttribute="centerY" id="OLZ-fU-vUL"/>
+                                    <constraint firstAttribute="trailing" secondItem="0wP-WT-hza" secondAttribute="trailing" constant="20" id="fbg-93-628"/>
                                     <constraint firstAttribute="bottom" secondItem="1Tb-dx-C7H" secondAttribute="bottom" constant="12" id="jrE-qe-pvI"/>
                                     <constraint firstItem="1Tb-dx-C7H" firstAttribute="leading" secondItem="YBn-ZJ-qgv" secondAttribute="leading" constant="20" id="lAl-cn-eyh"/>
                                     <constraint firstItem="dQU-JN-Q7d" firstAttribute="centerY" secondItem="1Tb-dx-C7H" secondAttribute="centerY" id="q3L-bi-hlH"/>
@@ -231,6 +246,7 @@
                         <outlet property="dropContainerView" destination="YBn-ZJ-qgv" id="qg4-wV-cv0"/>
                         <outlet property="fileCountTextField" destination="dQU-JN-Q7d" id="jRo-SK-k7f"/>
                         <outlet property="keyTextField" destination="BKW-E0-VoS" id="dKg-eo-i3j"/>
+                        <outlet property="modeSegmentedControl" destination="0wP-WT-hza" id="lhm-eY-JID"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>

@@ -8,7 +8,18 @@
 
 #import <Foundation/Foundation.h>
 
+typedef NS_ENUM(NSInteger, EncryptorActionMode) {
+    EncryptorActionModeEncryption,
+    EncryptorActionModeDecryption
+};
+
 @interface EncrypteOutputHelper : NSObject
-+ (NSInteger)encrypteFiles:(NSArray <NSURL *> *)fileURLs withKey:(NSString *)key;
++ (NSInteger)processFiles:(NSArray <NSURL *> *)fileURLs
+                  withKey:(NSString *)key
+                     mode:(EncryptorActionMode)mode;
++ (NSInteger)encrypteFiles:(NSArray <NSURL *> *)fileURLs
+                   withKey:(NSString *)key;
++ (NSInteger)decrypteFiles:(NSArray <NSURL *> *)fileURLs
+                   withKey:(NSString *)key;
 + (NSURL *)getOutputFolderURL;
 @end

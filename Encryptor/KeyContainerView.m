@@ -20,6 +20,6 @@
 }
 
 - (void)updateLayer {
-    self.layer.backgroundColor = [NSColor colorWithRed:0.09 green:0.56 blue:0.83 alpha:1.00].CGColor;
+    self.layer.backgroundColor =[NSColor colorWithRed:0.30 green:0.63 blue:0.98 alpha:1.00].CGColor;
 }
 @end
